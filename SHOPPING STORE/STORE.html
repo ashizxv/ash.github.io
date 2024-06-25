@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>store</title>
+  <style>
+    body {
+      background-color: #f2f2f2; /* Set your desired background color */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: white; /* Set container background color */
+      padding: 20px; /* Add padding for better appearance */
+      border-radius: 10px; /* Add rounded corners to the container */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navigation {
+      margin-top: 30px;
+    }
+
+    .navigation a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .item img {
+      max-width: 200px; /* Adjust the maximum width as needed */
+      height: 50px;
+    }
+
+    .top-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .add-product-form {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <h1>ZHIEND</h1>
+
+    <!-- Jeans Section -->
+    <h2 id="jeans">Jeans</h2>
+    <div class="item">
+      <img src="DENIM.jpg" alt="denim jeans">
+      <p>DENIM - 500php (Stock: <span id="stock_denim">10</span>)</p>
+      <button onclick="addToCart('DENIM')">Add to Cart</button>
+      <button onclick="addStock('DENIM')">Add Stock</button>
+    </div>
+    <div class="item">
+        <img src="DIOR.jpg" alt="dior Jeans">
+        <p>DIOR - 500Php (Stock: <span id="stock_dior">10</span>)</p>
+        <button onclick="addToCart('DIOR')">Add to Cart</button>
+        <button onclick="addStock('DIOR')">Add Stock</button>
+      </div>
+      <div class="item">
+        <img src="USA.jpg" alt="usa Jeans">
+        <p>USA - 500Php (Stock: <span id="stock_usa">10</span>)</p>
+        <button onclick="addToCart('USA')">Add to Cart</button>
+        <button onclick="addStock('USA')">Add Stock</button>
+      </div>
+    <!-- Add other jeans items similarly -->
+
+    <!-- T-Shirt Section -->
+    <h2 id="tshirts">T-Shirts</h2>
+    <div class="item">
+      <img src="POLO.jpg" alt="polo Tshirt">
+      <p>POLO - 100php (Stock: <span id="stock_polo">10</span>)</p>
+      <button onclick="addToCart('POLO')">Add to Cart</button>
+      <button onclick="addStock('POLO')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="PLAIN.jpg" alt="plain Tshirt">
+      <p>PLAIN - 100php (Stock: <span id="stock_plain">10</span>)</p>
+      <button onclick="addToCart('PLAIN')">Add to Cart</button>
+      <button onclick="addStock('PLAIN')">Add Stock</button>
+    </div>
+    <div class="item">
+        <img src="BLACK.jpg" alt="black Tshirt">
+        <p>BLACK - 100php (Stock: <span id="stock_black">10</span>)</p>
+        <button onclick="addToCart('BLACK')">Add to Cart</button>
+        <button onclick="addStock('BLACK')">Add Stock</button>
+      </div>
+    <!-- Add other t-shirt items similarly -->
+
+    <!-- Sandos Section -->
+    <h2 id="sandos">Sandos</h2>
+    <div class="item">
+      <img src="JERSEY.jpg" alt="Sando">
+      <p>JERSEY - 50php (Stock: <span id="stock_jersey">10</span>)</p>
+      <button onclick="addToCart('JERSEY')">Add to Cart</button>
+      <button onclick="addStock('JERSEY')">Add Stock</button>
+    </div>
+	
+	    <h2 id="sandos">Sandos</h2>
+    <div class="item">
+      <img src="WORK.jpg" alt="Sando">
+      <p>WORK - 50php (Stock: <span id="stock_work">10</span>)</p>
+      <button onclick="addToCart('WORK')">Add to Cart</button>
+      <button onclick="addStock('WORK')">Add Stock</button>
+    </div>
+	
+	    <h2 id="sandos">Sandos</h2>
+    <div class="item">
+      <img src="LIGHT.jpg" alt="Sando">
+      <p>LIGHT - 50php (Stock: <span id="stock_light">10</span>)</p>
+      <button onclick="addToCart('LIGHT')">Add to Cart</button>
+      <button onclick="addStock('LIGHT')">Add Stock</button>
+    </div>
+    <!-- Add other sando items similarly -->
+
+    <!-- Perfume Section -->
+    
+	<h2 id="perfumes">Perfumes</h2>
+    <div class="item">
+      <img src="VERSACE.jpg" alt="Perfume">
+      <p>VERSACE - 500php (Stock: <span id="stock_versace">10</span>)</p>
+      <button onclick="addToCart('VERSACE')">Add to Cart</button>
+      <button onclick="addStock('VERSACE')">Add Stock</button>
+    </div>
+	
+	<h2 id="perfumes">Perfumes</h2>
+    <div class="item">
+      <img src="LACOSTE.jpg" alt="Perfume">
+      <p>LACOSTE - 500php (Stock: <span id="stock_lacoste">10</span>)</p>
+      <button onclick="addToCart('LACOSTE')">Add to Cart</button>
+      <button onclick="addStock('LACOSTE')">Add Stock</button>
+    </div>
+	
+	<h2 id="perfumes">Perfumes</h2>
+    <div class="item">
+      <img src="VS.jpg" alt="Perfume">
+      <p>VS - 500php (Stock: <span id="stock_vs">10</span>)</p>
+      <button onclick="addToCart('VS')">Add to Cart</button>
+      <button onclick="addStock('VS')">Add Stock</button>
+    </div>
+    <!-- Add other perfume items similarly -->
+
+    <!-- Toys Section -->
+    <h2 id="toys">Toys</h2>
+    <div class="item">
+      <img src="RUBIKS.jpg" alt="Toys">
+      <p>RUBIKS - $100 (Stock: <span id="stock_rubiks">10</span>)</p>
+      <button onclick="addToCart('RUBIKS')">Add to Cart</button>
+      <button onclick="addStock('RUBIKS')">Add Stock</button>
+    </div>
+
+	    <div class="item">
+      <img src="SPINNER.jpg" alt="Toys">
+      <p>SPINNER - 100php (Stock: <span id="stock_spinner">10</span>)</p>
+      <button onclick="addToCart('SPINNER')">Add to Cart</button>
+      <button onclick="addStock('SPINNER')">Add Stock</button>
+    </div>
+	
+	    <div class="item">
+      <img src="BALL.jpg" alt="Toys">
+      <p>BALL - 100php (Stock: <span id="stock_ball">10</span>)</p>
+      <button onclick="addToCart('BALL')">Add to Cart</button>
+      <button onclick="addStock('BALL')">Add Stock</button>
+    </div>
+    <!-- Add other toy items similarly -->
+
+    <!-- Add Product Form -->
+    <div class="add-product-form">
+      <h2>Add New Product</h2>
+      <form id="newProductForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br><br>
+        <label for="productPrice">Product Price:</label>
+        <input type="number" id="productPrice" name="productPrice" required><br><br>
+        <label for="productStock">Product Stock:</label>
+        <input type="number" id="productStock" name="productStock" required><br><br>
+        <button type="button" onclick="addNewProduct()">Add Product</button>
+      </form>
+    </div>
+  </div>
+      <center><button onclick="showReceipt()">Show Receipt</button></center>
+  <button onclick="scrollToTop()" class="top-btn">Back to Top</button>
+
+  <script>
+    let cartItems = [];
+    let stocks = {
+      'DENIM': { price: 500, stock: 10 },
+      'DIOR': { price: 500, stock: 10 },
+      'USA': { price: 500, stock: 10 },
+
+      'POLO': { price: 100, stock: 10 },
+      'PLAIN': { price: 100, stock: 10 },
+      'BLACK': { price: 100, stock: 10 },
+
+      'JERSEY': { price: 50, stock: 10 },
+	  'WORK': { price: 50, stock: 10 },
+	  'LIGHT': { price: 50, stock: 10 },
+	  
+      'VERSACE': { price: 500, stock: 10 },
+	  'LACOSTE': { price: 500, stock: 10 },
+	  'VS': { price: 500, stock: 10 },
+	  
+      'RUBIKS': { price: 100, stock: 10 },
+	  'SPINNER': { price: 100, stock: 10 },
+	  'BALL': { price: 100, stock: 10 }
+    };
+
+    function addToCart(item) {
+      if (stocks[item].stock > 0) {
+        let itemIndex = cartItems.findIndex(cartItem => cartItem.name === item);
+        if (itemIndex === -1) {
+          cartItems.push({ name: item, price: stocks[item].price, quantity: 1 });
+        } else {
+          cartItems[itemIndex].quantity++;
+        }
+        alert("Item added to cart: " + item);
+        stocks[item].stock--;
+        updateStockDisplay(item);
+      } else {
+        alert("Sorry, " + item + " is out of stock.");
+      }
+    }
+
+    function addStock(item) {
+      stocks[item].stock++;
+      updateStockDisplay(item);
+      alert("Stock added for " + item);
+    }
+
+    function updateStockDisplay(item) {
+      document.getElementById('stock_' + item).textContent = stocks[item].stock;
+    }
+
+    function showReceipt() {
+      let receipt = "Receipt:\n";
+      let total = 0;
+      for (let i = 0; i < cartItems.length; i++) {
+        receipt += cartItems[i].name + "-Php" + cartItems[i].price + " x " + cartItems[i].quantity + "\n";
+        total += cartItems[i].price * cartItems[i].quantity;
+      }
+      receipt += "\nTotal: Php:" + total;
+      alert(receipt);
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector('.top-btn').style.display = "block";
+      } else {
+        document.querySelector('.top-btn').style.display = "none";
+      }
+    }
+
+    function scrollToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    function addNewProduct() {
+      const productName = document.getElementById('productName').value;
+      const productPrice = document.getElementById('productPrice').value;
+      const productStock = document.getElementById('productStock').value;
+
+      if (productName && productPrice && productStock) {
+        stocks[productName] = { price: parseInt(productPrice), stock: parseInt(productStock) };
+        alert("New product added: " + productName);
+        document.getElementById('productName').value = '';
+        document.getElementById('productPrice').value = '';
+        document.getElementById('productStock').value = '';
+        addProductSection(productName, productPrice, productStock);
+      } else {
+        alert("Please fill out all fields.");
+      }
+    }
+
+    function addProductSection(name, price, stock) {
+      const sectionId = name.toLowerCase();
+      const container = document.querySelector('.container');
+
+      const newSection = document.createElement('div');
+      newSection.classList.add('item');
+      newSection.innerHTML = `
+        <h2 id="${sectionId}">${name}</h2>
+        <img src="${sectionId}.jpg" alt="${name}">
+        <p>${name} - $${price} (Stock: <span id="stock_${sectionId}">${stock}</span>)</p>
+        <button onclick="addToCart('${name}')">Add to Cart</button>
+        <button onclick="addStock('${name}')">Add Stock</button>
+      `;
+
+      container.appendChild(newSection);
+    }
+  </script>
+</body>
+</html>

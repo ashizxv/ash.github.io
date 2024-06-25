@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Buttons</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    text-align: center;
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.responsive-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.responsive-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+}
+
+.shopping-store {
+    background-color: #333;
+}
+
+.shopping-store:hover {
+    background-color: #555;
+}
+
+.resume {
+    background-color: #333;
+}
+
+.resume:hover {
+    background-color: #555;
+}
+
+.regform {
+    background-color: #333;
+}
+
+.regform:hover {
+    background-color: #555;
+}
+
+.restaurant {
+    background-color: #333;
+}
+
+.restaurant:hover {
+    background-color: #555;
+}
+
+@media (max-width: 600px) {
+    .responsive-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="SHOPPING STORE/STORE.html" class="responsive-button shopping-store">STORE</a>
+        <a href="RESUME/MONTANO_RESUME.html" class="responsive-button resume">RESUME</a>
+        <a href="REGISTRATION/MONTANO_REGFORM.html" class="responsive-button regform">R.FORM</a>
+        <a href="RESTAURANT/Main Dish.html" class="responsive-button restaurant">RESTAURANT</a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

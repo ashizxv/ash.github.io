@@ -1,0 +1,202 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('img/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+li {
+  font-size: 20px;
+}
+
+.vegetable-menu {
+  padding-left: 100px;
+}
+
+.vegetable-menu ul {
+  list-style: none;
+}
+
+.vegetable-menu ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.vegetable-menu ul li img {
+  width: 350px;
+  margin-right: 20px;
+}
+
+.main-menu {
+  padding-left: 100px;
+}
+
+.main-menu ul {
+  list-style: none;
+}
+
+.main-menu ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main-menu ul li img {
+  width: 350px;
+  margin-right: 20px;
+}
+
+.appetizer-menu {
+  padding-left: 100px;
+}
+
+.appetizer-menu ul {
+  list-style: none;
+}
+
+.appetizer-menu ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.appetizer-menu ul li img {
+  width: 350px;
+  margin-right: 20px;
+}
+
+.drink-menu {
+  padding-left: 100px;
+}
+
+.drink-menu ul {
+  list-style: none;
+}
+
+.drink-menu ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.drink-menu ul li img {
+  width: 350px;
+  margin-right: 20px;
+}
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #b93632;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #181717;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=checkbox]:checked {
+  background-color: #555;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M5.5 13.6L2.9 11l-1.2 1.2 4.8 4.8 10.2-10.2-1.2-1.2-8.8 8.8z"/></svg>');
+  background-size: cover;
+}
+
+#reciept{
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:#063;
+  bottom:0px;
+  right:25%;
+}
+
+#order-button {
+  margin: 0 auto;
+  font-size: 55px; /* Adjust the font size as needed */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  background-color: #FF0000; /* Green background color */
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#orderButton {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.receipt {
+  width: 50%; /* Adjust width as needed */
+  margin: 100px auto; /* This centers the div horizontally */
+  /* Additional styling for the receipt can be added here */
+  border: 2px solid #000;
+  padding: 20px;
+  background-color: #FF0000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.floating-receipt {
+  position: fixed;
+  top: 30px; /* Adjust the distance from the top */
+  right: 30px; /* Adjust the distance from the right */
+  background-color: behind;
+  padding: 20px;
+  border: 0px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it appears on top of other content */
+  width: auto;
+}
+
+.floating-receipt .receipt {
+  max-height: 80vh; /* Limit height to 80% of viewport height */
+  overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+.floating-receipt .receipt h2 {
+  margin-top: 0;
+}
+
+.floating-receipt .receipt ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.floating-receipt .receipt button {
+  margin-top: 10px;
+}
